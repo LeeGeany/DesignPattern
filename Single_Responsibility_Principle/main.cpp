@@ -11,7 +11,7 @@ int main(void)
 	Memo.add("This is third Memo");
 
 	Memo.show();
-	CSave::saveAsFile(Memo, "Memo2.txt");
+	CSave::saveAsFile(Memo, "Memo.txt");
 
 	return 0;
 }

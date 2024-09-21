@@ -30,3 +30,22 @@ std::vector<std::string>& CMemo::GetEntries()
 	return entries;
 }
 
+/* 
+void CMemo::saveAsFile(const std::string& filename)
+{
+	std::ofstream ofs;
+	ofs.open(filename);
+
+	for (auto iter : entries)
+	{
+		ofs << iter << "\n";
+	}
+
+	ofs.close();
+}
+
+void CMemo::saveAsCloud(const std::string& sendip, const std::string& port)
+{
+	// ...
+} 
+*/

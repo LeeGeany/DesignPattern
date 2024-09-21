@@ -20,5 +20,10 @@ public:
 	void show();
 
 	std::vector<std::string>& GetEntries();
+
+	/* 다음 부분은 단일 책임 원칙으로 새로운 클래스로 기능을 빼자
+	void saveAsFile(const std::string& filename);
+	void saveAsCloud(const std::string& sendip, const std::string& port);
+	*/
 };
 
