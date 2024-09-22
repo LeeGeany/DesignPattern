@@ -3,7 +3,7 @@ class CHTMLElement
 private:
     /* data */
 public:
-    CHTMLElement(/* args */);
+    explicit CHTMLElement(/* args */);
     ~CHTMLElement();
 };
 
