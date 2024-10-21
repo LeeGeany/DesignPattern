@@ -7,3 +7,4 @@
 	2. Builder Pattern
 	3. Factory Pattern
 	4. Prototype Pattern
+	5. Singleton Pattern
