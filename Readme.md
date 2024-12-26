@@ -9,3 +9,9 @@
 	4. Prototype Pattern
 	5. Singleton Pattern
 	6. Adapter Pattern
+	7. Bridge Pattern
+	8. Composite Pattern
+	9. Decorator Pattern
+	10. Facade(생략)
+	11. Flyweight Pattern
+	12. Proxy Pattern
