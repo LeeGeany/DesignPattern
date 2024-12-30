@@ -1,4 +1,5 @@
 #include <string>
+#include <mutex>
 #include <vector>
 #include <iostream>
 
@@ -11,25 +12,35 @@ template <typename T> class Observable
 {
 private:
 	std::vector<Observer<T>*> observers;
+	std::mutex mtx;
 
 public:
 	void notify(T& source, const std::string& name)
 	{
+		std::lock_guard<std::mutex> lock(mtx);
 		for (auto obs : observers)
 		{
-			obs->field_changed(source, name);
+			// 재진입성 해결
+			if (obs)
+			{
+				obs->field_changed(source, name);
+			}
 		}
 	}
 
 	void subscribe(Observer<T>* f) 
 	{
+		std::lock_guard<std::mutex> lock(mtx);
 		observers.push_back(f); 
 	}
 
 	void unsubscribe(Observer<T>* observer)
 	{
-		observers.erase(
-			remove(observers.begin(), observers.end(), observer), observers.end());
+		auto it = find(observers.begin(), observers.end(), 0);
+		if (it != observers.end())
+		{
+			*it = nullptr;
+		}
 	}
 };
 

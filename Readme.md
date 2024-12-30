@@ -15,3 +15,12 @@
 	10. Facade(생략)
 	11. Flyweight Pattern
 	12. Proxy Pattern
+	13. Chain of Responsibility
+	14. Command
+	15. Interpreter
+	16. Iterator(생략)
+	17. Mediator
+	18. Memento
+	19. Null Instance(생략)
+	20. Observer
+	21. State
